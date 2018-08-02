@@ -18,7 +18,7 @@ public class UserRepositoryInMemory implements UserRepository {
 	
 	public void reset(){
 		
-		users.clear();
+		//users.clear();
 	}
 	
 	public void initialize() {
@@ -27,6 +27,7 @@ public class UserRepositoryInMemory implements UserRepository {
 		users.add(new UserEntity(847453675, "Iza", "Lewandowski", " ", "kuzynkaiza", "iza.lewandowski@onet.pl", UserLevel.INTERMEDIATE));
 		users.add(new UserEntity(45L, "Slawomir", "Lopez", "Tralala", "Zycie345", "slawomir.lopez@gmail.pl", UserLevel.ADVANCED));
 		users.add(new UserEntity(555L, "Jurek", "Broniecki", "Lubie zycie", "qwertz", "jurek.bronieckii@op.pl", UserLevel.BEGINNER));
+		users.add(new UserEntity(55L, "Jurek", "Mankowski", "Lubie zycie", "blafsj", "jurek.mankowski@op.pl", UserLevel.BEGINNER));
 		
 	}
 
@@ -40,9 +41,10 @@ public class UserRepositoryInMemory implements UserRepository {
 
 	@Override
 	public List<UserEntity> findAll() {
-		List<UserEntity> usersCopy = new ArrayList<>();
+		/*List<UserEntity> usersCopy = new ArrayList<>(users.size());
 		Collections.copy(usersCopy, users);
-		return usersCopy;
+		return usersCopy;*/
+		return new ArrayList<>(users);
 	}
 
 

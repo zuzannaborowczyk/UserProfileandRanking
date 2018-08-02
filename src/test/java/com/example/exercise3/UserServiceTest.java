@@ -1,4 +1,4 @@
-package com.example.Exercise3;
+package com.example.exercise3;
 
 import static org.junit.Assert.*;
 
@@ -135,6 +135,8 @@ public class UserServiceTest {
 	
 	
 	
+	
+	
 	@Test
 	public void shouldReturnUserProfile2(){
 		//given
@@ -162,7 +164,7 @@ public class UserServiceTest {
 		
 		//when
 		
-		UserTO result = userService.findById(2);
+		UserTO result = userService.findById(2L);
 		userService.editEmail(2, "m.lewan@op.pl");
 		
 		

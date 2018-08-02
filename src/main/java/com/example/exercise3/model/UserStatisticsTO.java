@@ -2,8 +2,6 @@ package com.example.exercise3.model;
 
 import java.util.List;
 
-
-
 public class UserStatisticsTO {
 
 	private UserTO user;
@@ -47,4 +45,6 @@ public class UserStatisticsTO {
 	}
 
 }
+
+
 

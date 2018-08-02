@@ -20,7 +20,7 @@ public class UserMapper {
 
 	public UserEntity mapToEntity(UserTO uT) {
 		UserEntity result = new UserEntity();
-		result.setUsertId(uT.getUserId());
+		result.setUserId(uT.getUserId());
 		result.setFirstName(uT.getFirstName());
 		result.setLastName(uT.getLastName());
 		result.setEmail(uT.getEmail());

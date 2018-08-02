@@ -10,7 +10,12 @@ public class UserEntity {
 	private String email;
 	private UserLevel userLevel;
 	
-
+public static UserEntity of(String firstName) {
+	return new UserEntity(0L, firstName, null, null, null, null, null);
+}
+public static UserEntity of(String firstName, String lastName) {
+	return new UserEntity(0L, firstName, lastName, null, null, null, null);
+}
 	public UserEntity(long userId, String firstName, String lastName, String lifeMotto, String password, String email,
 			UserLevel userLevel) {
 		
@@ -92,7 +97,7 @@ public class UserEntity {
 		return userId;
 	}
 
-	public void setUsertId(long id) {
+	public void setUserId(long id) {
 		this.userId = userId;
 	}
 

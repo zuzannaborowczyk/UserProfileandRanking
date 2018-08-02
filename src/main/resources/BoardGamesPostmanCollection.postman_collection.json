@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "756b4bfb-a112-4835-92f8-81851136d721",
+		"name": "BoardGamesPostmanCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"_postman_id": "53c42dc1-c016-47be-8959-1d7bc94a9dd0",
+			"name": "localhost:8080/usersById?id=5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/usersById?id=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usersById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				},
+				"description": "Error w momencie wyszukiwania id, ktorego nie ma w bazie(GET):"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "1e517d73-4bf4-4b0f-abb6-42cdc523d466",
+			"name": "localhost:8080/users?firstName=Jurek",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/users?firstName=Jurek",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Jurek"
+						}
+					]
+				},
+				"description": "Wyszukanie userow o imieniu Jurek(GET):"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "e7c32a6b-0417-4db7-9f6a-70b95a436c02",
+			"name": "localhost:8080/usersById?id=123",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 2,\n    \"firstName\": \"Marek\",\n    \"lastName\": \"Lewandowski\",\n    \"lifeMotto\": \"Carpe Diem\",\n    \"password\": \"Lubieplacki\",\n    \"email\": \"marek.lewandowski@op.pl\",\n    \"userLevel\": \"BEGINNER\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/usersById?id=123",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usersById"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "123"
+						}
+					]
+				},
+				"description": "Wyszukanie usera o id 123(GET):"
+			},
+			"response": []
+		},
+		{
+			"_postman_id": "d4cb842c-9693-406b-af44-db8e4a8a851e",
+			"name": "localhost:8080/user/2/life-motto?newLifeMotto=Zyciejestnowela",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:8080/user/2/life-motto?newLifeMotto=Zyciejestnowela",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"2",
+						"life-motto"
+					],
+					"query": [
+						{
+							"key": "newLifeMotto",
+							"value": "Zyciejestnowela"
+						}
+					]
+				},
+				"description": "Zmiana motta userowi o id 2L(PUT):"
+			},
+			"response": []
+		}
+	]
+}

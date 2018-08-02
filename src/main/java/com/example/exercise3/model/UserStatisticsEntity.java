@@ -3,6 +3,7 @@ package com.example.exercise3.model;
 import java.util.List;
 
 public class UserStatisticsEntity {
+
 	private UserEntity user;
 	private List<GameEntity> playedGames;
 	private int rankingPoints;
@@ -23,7 +24,7 @@ public class UserStatisticsEntity {
 		return user;
 	}
 
-	public void setUserEntity(UserEntity user) {
+	public void setUser(UserEntity user) {
 		this.user = user;
 	}
 
@@ -31,8 +32,8 @@ public class UserStatisticsEntity {
 		return playedGames;
 	}
 
-	public void setPlayedGames(List<GameEntity> playedGames) {
-		this.playedGames = playedGames;
+	public void setPlayedGames(List<GameEntity> list) {
+		this.playedGames = list;
 	}
 
 	public int getRankingPoints() {
@@ -43,4 +44,9 @@ public class UserStatisticsEntity {
 		this.rankingPoints = rankingPoints;
 	}
 
+
+
+
 }
+
+

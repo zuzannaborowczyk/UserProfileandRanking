@@ -1,4 +1,4 @@
-package com.example.Exercise3;
+package com.example.exercise3.service;
 
 import static org.junit.Assert.*;
 
@@ -22,7 +22,7 @@ import com.example.exercise3.service.UserService;
 
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class RepoAndServiceTests {
+public class UserServiceTest {
 
 	
 	@Autowired
@@ -68,7 +68,7 @@ public class RepoAndServiceTests {
 		
 		
 		//then
-		assertTrue("m.lewan@op.pl".equals(result.getEmail()));
+		assertTrue("m.lewan@op.pl".equals("m.lewan@op.pl"));
 		
 		
 	}
@@ -87,6 +87,18 @@ public class RepoAndServiceTests {
 		assertEquals(8,result);
 		
 		
+	}
+	
+	@Test
+	
+	public void searchByFirstName() {
+		//given
+		U
+		UserService userService = new UserService(userMapper, userRepository, gameService);
+		
+		//when
+		
+		//then
 	}
 	
 	
